@@ -230,6 +230,46 @@ body {
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
+
+/* V19: Nur auf Smartphones: Navigationsleiste zuverlässig über der Hauptkachel.
+   Desktop-Layout und sämtliche Karten bleiben unverändert. */
+@media (max-width: 720px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    grid-template-rows: auto auto;
+    height: auto;
+    min-height: 0;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    padding: 12px 0 14px;
+    position: relative;
+    z-index: 5;
+  }
+  .topbar .brand { grid-column:1;grid-row:1;min-width:0; }
+  .topbar .nav-cta { grid-column:2;grid-row:1;justify-self:end; }
+  .topbar .navlinks {
+    grid-column:1 / -1;
+    grid-row:2;
+    order:initial;
+    display:flex;
+    width:100%;
+    min-width:0;
+    flex-wrap:nowrap;
+    gap:18px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:9px 2px 12px;
+    white-space:nowrap;
+    font-size:12px;
+    line-height:1.4;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  .topbar .navlinks a { flex:0 0 auto;display:inline-block; }
+  .hero { margin-top: 5px; }
+}
 </style></head><body>
 <div class="shell"><header class="topbar"><a class="brand" href="index.html" aria-label="ShopSieg Startseite"><img src="shopsieg-logo.svg" alt=""><span>Shop<span class="teal">Sieg</span></span></a><nav class="navlinks" aria-label="Hauptnavigation"><a href="#start">Startseite</a><a href="#technik">Technik &amp; KI</a><a href="#business">Business &amp; Finanzen</a><a href="#fitness">Fitness &amp; Gesundheit</a><a href="#lifestyle">Lifestyle &amp; Alltag</a></nav><a class="nav-cta" href="#empfehlungen">Empfehlungen</a></header>
 <main><section id="start" class="hero"><div class="hero-text"><div class="eyebrow">Entdecken statt endlos suchen</div><h1>Gute Ideen.<br><em>Klare Auswahl.</em><br>Dein ShopSieg.</h1><p>Entdecke Produkte, die zu dir passen.</p><a class="button" href="#kategorien">Jetzt entdecken <span aria-hidden="true">→</span></a></div><div class="hero-art" role="img" aria-label="Türkisfarbene ShopSieg-Einkaufstasche vor blau-türkisem Hintergrund"><div class="coral-circle"></div><div class="bag"></div></div></section>
