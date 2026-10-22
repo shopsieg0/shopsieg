@@ -316,6 +316,42 @@ body {
     padding: 12px 30px 12px 10px !important;
   }
 }
+/* V22: Einheitliche Farben und weiche Fotouebergaenge */
+
+/* Individuelle, dezente Kachelhintergruende */
+.category-grid .category:nth-child(1) { background: #e5f0ff !important; }
+.category-grid .category:nth-child(2) { background: #e0f7ef !important; }
+.category-grid .category:nth-child(3) { background: #fff0e5 !important; }
+.category-grid .category:nth-child(4) { background: #f1eaff !important; }
+.category-grid .category:nth-child(5) { background: #e8f5fc !important; }
+.category-grid .category:nth-child(6) { background: #eaf3e7 !important; }
+
+/* Weicher Uebergang vom Foto zum Text */
+.category-grid .category .photo {
+  position: relative !important;
+  overflow: hidden;
+}
+
+.category-grid .category .photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 55%,
+    rgba(255,255,255,0.20) 75%,
+    var(--tile, #ffffff) 100%
+  ) !important;
+  pointer-events: none;
+}
+
+/* Passende Uebergangsfarben je Kachel */
+.category-grid .category:nth-child(1) { --tile: #e5f0ff; }
+.category-grid .category:nth-child(2) { --tile: #e0f7ef; }
+.category-grid .category:nth-child(3) { --tile: #fff0e5; }
+.category-grid .category:nth-child(4) { --tile: #f1eaff; }
+.category-grid .category:nth-child(5) { --tile: #e8f5fc; }
+.category-grid .category:nth-child(6) { --tile: #eaf3e7; }
 </style></head><body>
 <div class="shell"><header class="topbar"><a class="brand" href="index.html" aria-label="ShopSieg Startseite"><img src="shopsieg-logo.svg" alt=""><span>Shop<span class="teal">Sieg</span></span></a><nav class="navlinks" aria-label="Hauptnavigation"><a href="#start">Startseite</a><a href="#technik">Technik &amp; KI</a><a href="#business">Business &amp; Finanzen</a><a href="#fitness">Fitness &amp; Gesundheit</a><a href="#lifestyle">Lifestyle &amp; Alltag</a></nav><a class="nav-cta" href="#empfehlungen">Empfehlungen</a></header>
 <main><section id="start" class="hero"><div class="hero-text"><div class="eyebrow">Entdecken statt endlos suchen</div><h1>Gute Ideen.<br><em>Klare Auswahl.</em><br>Dein ShopSieg.</h1><p>Entdecke Produkte, die zu dir passen.</p><a class="button" href="#kategorien">Jetzt entdecken <span aria-hidden="true">→</span></a></div><div class="hero-art" role="img" aria-label="Türkisfarbene ShopSieg-Einkaufstasche vor blau-türkisem Hintergrund"><div class="coral-circle"></div><div class="bag"></div></div></section>
