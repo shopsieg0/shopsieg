@@ -270,10 +270,43 @@ body {
   .topbar .navlinks a { flex:0 0 auto;display:inline-block; }
   .hero { margin-top: 5px; }
 }
+/* V20: Sechs Kacheln, 3 x 2, mittig zentriert */
+@media (min-width: 721px) {
+  .category-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 84% !important;
+    max-width: 1100px !important;
+    margin: 14px auto 44px !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .category-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}/* Foto für die sechste Kategorie */
+#werkzeug .photo {
+  background-image: url('werkzeug.jpg') !important;
+  background-size: cover;
+  background-position: center;
+}
 </style></head><body>
 <div class="shell"><header class="topbar"><a class="brand" href="index.html" aria-label="ShopSieg Startseite"><img src="shopsieg-logo.svg" alt=""><span>Shop<span class="teal">Sieg</span></span></a><nav class="navlinks" aria-label="Hauptnavigation"><a href="#start">Startseite</a><a href="#technik">Technik &amp; KI</a><a href="#business">Business &amp; Finanzen</a><a href="#fitness">Fitness &amp; Gesundheit</a><a href="#lifestyle">Lifestyle &amp; Alltag</a></nav><a class="nav-cta" href="#empfehlungen">Empfehlungen</a></header>
 <main><section id="start" class="hero"><div class="hero-text"><div class="eyebrow">Entdecken statt endlos suchen</div><h1>Gute Ideen.<br><em>Klare Auswahl.</em><br>Dein ShopSieg.</h1><p>Entdecke Produkte, die zu dir passen.</p><a class="button" href="#kategorien">Jetzt entdecken <span aria-hidden="true">→</span></a></div><div class="hero-art" role="img" aria-label="Türkisfarbene ShopSieg-Einkaufstasche vor blau-türkisem Hintergrund"><div class="coral-circle"></div><div class="bag"></div></div></section>
-<section id="kategorien" aria-label="Unsere Kategorien" class="category-grid"><a class="category" id="technik" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">⌘</span><h2>Technik &amp; KI</h2><p>Digitale Tools und smarte Technik</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="business" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">▣</span><h2>Business &amp; Finanzen</h2><p>Wissen und praktische Lösungen</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="fitness" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">✳</span><h2>Fitness &amp; Gesundheit</h2><p>Aktivität und Wohlbefinden</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="lifestyle" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">⌂</span><h2>Lifestyle &amp; Alltag</h2><p>Ideen für jeden Tag</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="reisen" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">✈</span><h2>Reisen &amp; Urlaub</h2><p>Reiseideen und Angebote für deine Auszeit</p></div><span class="arrow" aria-hidden="true">→</span></a></section>
+<section id="kategorien" aria-label="Unsere Kategorien" class="category-grid"><a class="category" id="technik" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">⌘</span><h2>Technik &amp; KI</h2><p>Digitale Tools und smarte Technik</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="business" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">▣</span><h2>Business &amp; Finanzen</h2><p>Wissen und praktische Lösungen</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="fitness" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">✳</span><h2>Fitness, Gesundheit &amp; Supplemente</h2><p>Aktivität und Wohlbefinden</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="lifestyle" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">⌂</span><h2>Lifestyle &amp; Alltag</h2><p>Ideen für jeden Tag</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="reisen" href="#empfehlungen"><div class="photo" aria-hidden="true"></div><div class="copy"><span class="symbol" aria-hidden="true">✈</span><h2>Reisen &amp; Urlaub</h2><p>Reiseideen und Angebote für deine Auszeit</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="category" id="werkzeug" href="#empfehlungen">
+  <div class="photo" aria-hidden="true"></div>
+  <div class="copy">
+    <span class="symbol" aria-hidden="true">⚒</span>
+    <h2>Werkzeug, Haus &amp; Garten</h2>
+    <p>Praktische Produkte für Heimwerken, Haushalt und Garten.</p>
+  </div>
+  <span class="arrow" aria-hidden="true">›</span>
+</a></section>
 <section id="empfehlungen"><div class="section-heading"><div><span class="label">Ausgewählte Empfehlungen</span><h2>Unsere Top-Empfehlung</h2><p>ShopSieg befindet sich im Aufbau – Produktempfehlungen folgen.</p></div><a href="#weitere" class="secondary-btn">Alle Empfehlungen ansehen →</a></div><div class="feature"><div class="feature-visual" role="img" aria-label="Symbolische Darstellung eines Laptops; noch kein konkretes Produkt"><span class="tag">✦ Vorschau · noch keine Produktempfehlung</span></div><div class="feature-copy"><span class="label">Technik &amp; KI</span><h3>Moderne Technik für deinen Alltag</h3><p>Hier werden künftig ausgewählte Produkte mit echten Bildern und nachvollziehbaren Informationen vorgestellt. Noch keine konkrete Produktempfehlung.</p><span class="status">In Vorbereitung</span></div></div><div id="weitere" class="extras"><article class="extra"><span class="label">Business &amp; Finanzen</span><h3>Praktische Ideen</h3><p>Weitere Vorstellungen folgen, sobald passende Produkte ausgewählt sind.</p></article><article class="extra"><span class="label">Lifestyle &amp; Alltag</span><h3>Neue Entdeckungen</h3><p>Platz für kommende Inspirationen und Empfehlungen.</p></article></div></section>
 <section class="about"><h2>Weniger suchen. Mehr entdecken.</h2><p>ShopSieg wird ein unabhängiges Empfehlungsportal für Technik, Business, Fitness und Lifestyle. Die Website befindet sich derzeit im Aufbau. Es gibt noch keine aktiven Affiliate-Angebote.</p></section><p class="disclosure"><strong>Transparenz:</strong> Künftige Affiliate-Links werden gekennzeichnet. Bei einem Kauf über solche Links können wir eine Provision erhalten. Für dich entstehen dadurch nicht zwangsläufig zusätzliche Kosten.</p></main></div>
 <footer class="footer"><div class="shell footer-inner"><div><div class="footer-brand"><img src="shopsieg-logo.svg" alt="">ShopSieg</div><p>© 2026 ShopSieg · Website im Aufbau</p></div><nav class="footer-links" aria-label="Rechtliche Informationen"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="#start">Nach oben ↑</a></nav></div></footer>
