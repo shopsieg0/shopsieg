@@ -295,6 +295,27 @@ body {
   background-size: cover;
   background-position: center;
 }
+/* V21: Einheitliche Foto-Text-Aufteilung */
+@media (min-width: 721px) {
+  .category-grid .category {
+    display: grid !important;
+    grid-template-columns: 47% 53% !important;
+    grid-template-rows: 1fr !important;
+  }
+
+  .category-grid .category .photo {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .category-grid .category .copy {
+    min-width: 0;
+    padding: 12px 30px 12px 10px !important;
+  }
+}
 </style></head><body>
 <div class="shell"><header class="topbar"><a class="brand" href="index.html" aria-label="ShopSieg Startseite"><img src="shopsieg-logo.svg" alt=""><span>Shop<span class="teal">Sieg</span></span></a><nav class="navlinks" aria-label="Hauptnavigation"><a href="#start">Startseite</a><a href="#technik">Technik &amp; KI</a><a href="#business">Business &amp; Finanzen</a><a href="#fitness">Fitness &amp; Gesundheit</a><a href="#lifestyle">Lifestyle &amp; Alltag</a></nav><a class="nav-cta" href="#empfehlungen">Empfehlungen</a></header>
 <main><section id="start" class="hero"><div class="hero-text"><div class="eyebrow">Entdecken statt endlos suchen</div><h1>Gute Ideen.<br><em>Klare Auswahl.</em><br>Dein ShopSieg.</h1><p>Entdecke Produkte, die zu dir passen.</p><a class="button" href="#kategorien">Jetzt entdecken <span aria-hidden="true">→</span></a></div><div class="hero-art" role="img" aria-label="Türkisfarbene ShopSieg-Einkaufstasche vor blau-türkisem Hintergrund"><div class="coral-circle"></div><div class="bag"></div></div></section>
